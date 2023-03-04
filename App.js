@@ -5,7 +5,7 @@ export default function App() {
     <View style={[styles.container,{flex:1}]}>
 
       <View style={[styles.container,styles.views,{flex:1, backgroundColor:'powderblue', }]}>
-        <Text>Imagen</Text>
+        <Banner name="calcular1" title="asdasd"></Banner>
       </View>
       
       <View style={[styles.views,styles.container,{flex:5, backgroundColor:'yellowgreen', }]}>
@@ -16,16 +16,15 @@ export default function App() {
       <Text>derechos reservados</Text>
       </View>
     
+
     </View>
   );
 }
 
 //CREAR COMPONENTE PARA LA IMAGEN
-function Banner(){
+function Banner(props){
   return(
-   <Image source={require('')}>
-
-    </Image>
+   <Image source={require(`./assets/images/${props.name}.png`)} style={{width:'100%',height:'100%', resizeMode:'stretch'}}></Image>
 
   );
 }
